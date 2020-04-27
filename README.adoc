@@ -1,0 +1,8 @@
+
+Spring cloud stream test project.
+Other additional resources
+
+https://www.confluent.io/blog/spring-for-apache-kafka-deep-dive-part-2-apache-kafka-spring-cloud-stream/
+https://github.com/spring-cloud/spring-cloud-stream-samples
+https://spring.io/projects/spring-cloud-stream#overview
+https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/3.0.4.RELEASE/reference/html/spring-cloud-stream.html#spring-cloud-stream-overview-introducing

@@ -1,0 +1,33 @@
+spring.cloud.stream:
+  bindings:
+    sink-in-0:
+      destination: my-input-topic
+      group:  mygroup1
+      retryableExceptions:
+                    java.lang.RuntimeException: true
+                    java.lang.IllegalStateException: false
+    source-out-0:
+      destinationion: my-output-topic
+  kafka:
+
+    streams:
+      binder:
+        applicationId: spring-cloud-stream
+        configuration:
+          commit.interval.ms: 100
+          default:
+            key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+            value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+#Enable metrics
+management:
+  endpoint:
+    health:
+      show-details: ALWAYS
+  endpoints:
+    web:
+      exposure:
+        include: metrics,health
+#Enable logging to debug for spring kafka config
+logging:
+  level:
+    org.springframework.kafka.config: debug
